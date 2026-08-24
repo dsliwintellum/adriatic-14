@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b3b49" />
+  <meta name="description" content="A 14-day conversational Croatian and Montenegrin travel language coach." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Adriatic 14" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Adriatic 14</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div id="app-shell">
+    <header class="topbar">
+      <button class="brand" data-route="home" aria-label="Go to Today">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img"><path d="M8 31c6-1 9-6 15-6s9 5 17 4"/><path d="M8 37c6-1 9-6 15-6s9 5 17 4"/><path d="M11 20 24 8l13 12"/><path d="M17 20h14"/></svg>
+        </span>
+        <span><strong>Adriatic</strong><em>14</em></span>
+      </button>
+      <div class="topbar-actions">
+        <button id="country-toggle" class="country-toggle" aria-label="Switch language mode">
+          <span id="country-flag">🇭🇷</span>
+          <span id="country-name">Croatia</span>
+          <span aria-hidden="true">⌄</span>
+        </button>
+        <button id="settings-button" class="icon-button" aria-label="Open settings">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.12 2.12-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.56V20.3h-3v-.08a1.7 1.7 0 0 0-1.03-1.56 1.7 1.7 0 0 0-1.88.34l-.06.06-2.12-2.12.06-.06A1.7 1.7 0 0 0 7.06 15a1.7 1.7 0 0 0-1.56-1.03H5.4v-3h.1a1.7 1.7 0 0 0 1.56-1.03 1.7 1.7 0 0 0-.34-1.88L6.66 8l2.12-2.12.06.06a1.7 1.7 0 0 0 1.88.34 1.7 1.7 0 0 0 1.03-1.56V4.6h3v.12a1.7 1.7 0 0 0 1.03 1.56 1.7 1.7 0 0 0 1.88-.34l.06-.06L19.84 8l-.06.06a1.7 1.7 0 0 0-.34 1.88 1.7 1.7 0 0 0 1.56 1.03h.1v3H21A1.7 1.7 0 0 0 19.4 15Z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <div id="view" aria-live="polite"></div>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Primary navigation">
+      <button data-route="home" class="nav-item active">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+        <span>Today</span>
+      </button>
+      <button data-route="course" class="nav-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5Z"/><path d="M4 5.5v16"/><path d="M8 7h8M8 11h8"/></svg>
+        <span>Course</span>
+      </button>
+      <button data-route="practice" class="nav-item nav-practice">
+        <span class="practice-orb">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M8 7v10M16 7v10M4 10v4M20 10v4"/></svg>
+        </span>
+        <span>Practice</span>
+      </button>
+      <button data-route="phrasebook" class="nav-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3Z"/><path d="M8 20a3 3 0 0 1 0-6h11"/><path d="M9 8h6"/></svg>
+        <span>Phrases</span>
+      </button>
+      <button data-route="trip" class="nav-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3Z"/><path d="M9 3v15M15 6v15"/></svg>
+        <span>Trip</span>
+      </button>
+    </nav>
+  </div>
+
+  <div id="quick-say" class="sheet" aria-hidden="true">
+    <div class="sheet-backdrop" data-close-sheet></div>
+    <section class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="quick-say-title">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <div class="sheet-header">
+        <div>
+          <p class="eyebrow">Offline phrase card</p>
+          <h2 id="quick-say-title">Say it now</h2>
+        </div>
+        <button class="icon-button" data-close-sheet aria-label="Close">✕</button>
+      </div>
+      <div id="quick-say-content"></div>
+    </section>
+  </div>
+
+  <div id="settings-sheet" class="sheet" aria-hidden="true">
+    <div class="sheet-backdrop" data-close-settings></div>
+    <section class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <div class="sheet-header">
+        <div>
+          <p class="eyebrow">Personalize your course</p>
+          <h2 id="settings-title">Settings</h2>
+        </div>
+        <button class="icon-button" data-close-settings aria-label="Close">✕</button>
+      </div>
+      <form id="settings-form" class="settings-form">
+        <label>First name<input id="setting-name" name="name" autocomplete="given-name" /></label>
+        <label>Course start date<input id="setting-start-date" name="startDate" type="date" /></label>
+        <label>Speech speed
+          <select id="setting-speech-rate" name="speechRate">
+            <option value="0.72">Learning</option>
+            <option value="0.9">Natural</option>
+            <option value="1.05">Street mode</option>
+          </select>
+        </label>
+        <label class="toggle-row"><span><strong>Show pronunciation help</strong><small>Sound guide derived from the same local spelling used for audio</small></span><input id="setting-pronunciation" name="showPronunciation" type="checkbox" /></label>
+        <p id="voice-status" class="settings-note" role="status">Audio: checking compatible voices…</p>
+        <label class="toggle-row"><span><strong>Haptic feedback</strong><small>Use light vibration where supported</small></span><input id="setting-haptics" name="haptics" type="checkbox" /></label>
+        <button class="primary-button" type="submit">Save settings</button>
+        <button id="export-progress" class="secondary-button" type="button">Export progress</button>
+        <button id="reset-progress" class="text-button danger" type="button">Reset all progress</button>
+      </form>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

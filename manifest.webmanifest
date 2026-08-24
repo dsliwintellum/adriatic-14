@@ -1,0 +1,14 @@
+{
+  "name": "Adriatic 14",
+  "short_name": "Adriatic 14",
+  "description": "A 14-day conversational Croatian and Montenegrin travel language coach.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f0e8",
+  "theme_color": "#0b3b49",
+  "orientation": "portrait-primary",
+  "icons": [
+    {"src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}
