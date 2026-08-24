@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "lessons_rendered": 14,
+  "routes_checked": [
+    "course",
+    "practice",
+    "phrasebook",
+    "trip"
+  ],
+  "runtime_errors": [],
+  "screenshots": [
+    "home-desktop.png",
+    "home-mobile.png",
+    "lesson-perast-mobile.png"
+  ]
+}

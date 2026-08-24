@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "version": "1.0.3",
+  "features_checked": [
+    "adaptive daily review priority",
+    "Perast trip shortcut",
+    "Zabljak trip shortcut",
+    "Korcula trip shortcut",
+    "Dubrovnik trip shortcut"
+  ],
+  "lessons_rendered": 14,
+  "runtime_errors": [],
+  "static_js_checks": "passed"
+}
